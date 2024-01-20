@@ -1,6 +1,6 @@
 vim.g.mapleader = ' '
 
-vim.opt.guicursor = ''
+-- vim.opt.guicursor = ''
 
 -- Line numbering
 vim.opt.nu = true
