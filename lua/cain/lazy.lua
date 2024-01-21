@@ -15,6 +15,14 @@ vim.opt.rtp:prepend(lazypath)
 -- Setup Plugins
 require('lazy').setup({
 
+    -- This seems like a cool theme
+    {
+        'folke/tokyonight.nvim',
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    },
+
     -- Search for and open file
     {
         'nvim-telescope/telescope.nvim', tag = '0.1.5',
