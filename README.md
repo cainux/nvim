@@ -1,10 +1,10 @@
 ## Instructions
 
-- Clone to ~/.config/nvim
+- Clone to `~/.config/nvim`
 - Have the following installed:
-  - ripgrep
-  - node (use nvm or volta)
-  - unzip
+  - `ripgrep`
+  - `node` (use nvm or volta)
+  - `unzip`
 
 ### Recommended
 
