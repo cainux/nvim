@@ -23,6 +23,9 @@ require("lazy").setup({
         opts = {},
     },
 
+    -- Another popular theme
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+
     -- Search for and open file
     {
         "nvim-telescope/telescope.nvim", tag = "0.1.5",
