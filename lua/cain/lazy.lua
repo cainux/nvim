@@ -23,7 +23,7 @@ require("lazy").setup({
         opts = {},
     },
 
-    -- Another popular theme
+    -- Another popular theme (I currently prefer this one)
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
     -- Search for and open file
@@ -60,6 +60,7 @@ require("lazy").setup({
 
     { "ThePrimeagen/harpoon" },
 
+    -- So we can see who is responsible for bad lines of code
     { "f-person/git-blame.nvim" },
 
     -- Manage language servers from within neovim
@@ -83,4 +84,7 @@ require("lazy").setup({
     -- Debugging
     { "mfussenegger/nvim-dap" },
     { "rcarriga/nvim-dap-ui" },
+
+    -- Auto detect indent style within a file
+    { "tpope/vim-sleuth" },
 })
