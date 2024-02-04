@@ -88,4 +88,7 @@ require("lazy").setup({
 
     -- Auto detect indent style within a file
     { "tpope/vim-sleuth" },
+
+    -- Auto close the things you want to auto close!
+    { "m4xshen/autoclose.nvim" },
 })
