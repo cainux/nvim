@@ -1,25 +1,25 @@
+-- Default options
+local opts = { silent = true }
+
 -- Open netrw (try to use telescope instead)
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- Paste from system clipboard
-vim.keymap.set("n", "<leader>p", [["+p]])
+vim.keymap.set("n", "<leader>p", [["+p]], opts)
 
 -- Copy to system clipboard
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
-vim.keymap.set("n", "<leader>Y", [["+Y]])
+vim.keymap.set({"n", "v"}, "<leader>y", [["+y]], opts)
+vim.keymap.set("n", "<leader>Y", [["+Y]], opts)
 
--- Not sure I'll get used to this
-vim.keymap.set("i", "<C-c>", "<Esc>")
+-- Couple of interesting ways of leaving insert mode
+vim.keymap.set("i", "<C-c>", "<ESC>", opts)
+vim.keymap.set("i", "jk", "<ESC>", opts)
 
 -- This is decades old for me
-vim.keymap.set("n", "<C-s>", ":update<CR>")
-
--- Maybe I can get used this as a way of leaving insert mode?
-vim.keymap.set("i", "jk", "<ESC>")
+vim.keymap.set("n", "<C-s>", ":update<CR>", opts)
 
 -- Disable the arrow keys (really?)
-vim.keymap.set('', '<up>', '<nop>')
-vim.keymap.set('', '<down>', '<nop>')
-vim.keymap.set('', '<left>', '<nop>')
-vim.keymap.set('', '<right>', '<nop>')
-
+vim.keymap.set('', '<up>', '<nop>', opts)
+vim.keymap.set('', '<down>', '<nop>', opts)
+vim.keymap.set('', '<left>', '<nop>', opts)
+vim.keymap.set('', '<right>', '<nop>', opts)
