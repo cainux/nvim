@@ -13,3 +13,13 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 
 -- This is decades old for me
 vim.keymap.set("n", "<C-s>", ":update<CR>")
+
+-- Maybe I can get used this as a way of leaving insert mode?
+vim.keymap.set("i", "jk", "<ESC>")
+
+-- Disable the arrow keys (really?)
+vim.keymap.set('', '<up>', '<nop>')
+vim.keymap.set('', '<down>', '<nop>')
+vim.keymap.set('', '<left>', '<nop>')
+vim.keymap.set('', '<right>', '<nop>')
+
