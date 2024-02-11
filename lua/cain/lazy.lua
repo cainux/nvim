@@ -90,5 +90,16 @@ require("lazy").setup({
     { "tpope/vim-sleuth" },
 
     -- Auto close the things you want to auto close!
-    { "m4xshen/autoclose.nvim" },
+    -- { "m4xshen/autoclose.nvim" },
+
+    -- neotest
+    { 
+        "nvim-neotest/neotest",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "antoinemadec/FixCursorHold.nvim",
+            "nvim-treesitter/nvim-treesitter",
+            "Issafalcon/neotest-dotnet"
+        }
+    },
 })
