@@ -16,12 +16,12 @@ return {
                 "typescript",
                 "yaml",
                 "dockerfile",
-                "svelte"
+                "svelte",
             },
-            auto_install = true,
+            auto_install = false,
             sync_install = false,
             highlight = { enable = true },
             indent = { enable = true },
         })
-    end
+    end,
 }

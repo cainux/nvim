@@ -11,23 +11,23 @@ return {
 		config = function()
 			require("mason-lspconfig").setup({
 				ensure_installed = {
+					-- for configuring neovim
 					"lua_ls",
-					"tsserver",
 
-					-- -- my day job
-					-- "omnisharp",
-					-- "terraformls",
-					-- "tflint",
-					-- "dockerls",
-					-- "docker_compose_language_service",
-					-- "bashls",
-					--
-					-- -- bit of fun
-					-- "svelte", -- of course
-					-- "tsserver",
-					-- "cssls",
-					-- "rust_analyzer",
-					-- "sqlls",
+					-- my day job
+					"omnisharp",
+					"terraformls",
+					"tflint",
+					"dockerls",
+					"docker_compose_language_service",
+					"bashls",
+
+					-- bit of fun
+					"svelte", -- of course
+					"tsserver",
+					"cssls",
+					"rust_analyzer",
+					"sqlls",
 				},
 				-- handlers = {
 				--     lsp_zero.default_setup,
@@ -45,12 +45,19 @@ return {
 			local lspconfig = require("lspconfig")
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-			lspconfig.lua_ls.setup({
-				capabilities = capabilities,
-			})
-			lspconfig.tsserver.setup({
-				capabilities = capabilities,
-			})
+			lspconfig.lua_ls.setup({ capabilities = capabilities })
+
+			lspconfig.omnisharp.setup({ capabilities = capabilities })
+			lspconfig.terraformls.setup({ capabilities = capabilities })
+			lspconfig.dockerls.setup({ capabilities = capabilities })
+			lspconfig.docker_compose_language_service.setup({ capabilities = capabilities })
+			lspconfig.bashls.setup({ capabilities = capabilities })
+
+			lspconfig.svelte.setup({ capabilities = capabilities })
+			lspconfig.tsserver.setup({ capabilities = capabilities })
+			lspconfig.cssls.setup({ capabilities = capabilities })
+			lspconfig.rust_analyzer.setup({ capabilities = capabilities })
+			lspconfig.sqlls.setup({ capabilities = capabilities })
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
