@@ -47,7 +47,7 @@ return {
 
 			lspconfig.lua_ls.setup({ capabilities = capabilities })
 
-			lspconfig.omnisharp.setup({ capabilities = capabilities })
+			lspconfig.omnisharp.setup({ cmd = { "omnisharp" }, capabilities = capabilities })
 			lspconfig.terraformls.setup({ capabilities = capabilities })
 			lspconfig.dockerls.setup({ capabilities = capabilities })
 			lspconfig.docker_compose_language_service.setup({ capabilities = capabilities })
