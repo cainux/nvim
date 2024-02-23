@@ -2,6 +2,7 @@
 
 - Clone to `~/.config/nvim`
 - Have the following installed:
+  - `nodejs` and `npm`
   - `ripgrep`
   - `node` (use nvm or volta)
   - `unzip`
