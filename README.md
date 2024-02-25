@@ -4,7 +4,6 @@
 - Have the following installed:
   - `nodejs` and `npm`
   - `ripgrep`
-  - `node` (use nvm or volta)
   - `unzip`
   - A [Nerd Font](https://www.nerdfonts.com/) installed on your terminal
     - I usually use [MesloLGS](https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#fonts) recommended by Powerlevel10k
