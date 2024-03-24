@@ -1,31 +1,26 @@
--- Default options
-local opts = { silent = true }
-
--- Open netrw (try to use telescope instead)
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-
--- Paste from system clipboard
-vim.keymap.set("n", "<leader>p", [["+p]], opts)
-
--- Copy to system clipboard
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]], opts)
-vim.keymap.set("n", "<leader>Y", [["+Y]], opts)
-
 -- Couple of interesting ways of leaving insert mode
-vim.keymap.set("i", "<C-c>", "<ESC>", opts)
-vim.keymap.set("i", "jk", "<ESC>", opts)
+vim.keymap.set("i", "<C-c>", "<ESC>")
+vim.keymap.set("i", "jk", "<ESC>")
 
 -- This is decades old for me
 vim.keymap.set("n", "<C-s>", ":update<CR>", opts)
 
--- Move around in insert mode
-vim.keymap.set("i", "<C-h>", "<left>", opts)
-vim.keymap.set("i", "<C-j>", "<down>", opts)
-vim.keymap.set("i", "<C-k>", "<up>", opts)
-vim.keymap.set("i", "<C-l>", "<right>", opts)
+-- Diagnostic keymaps
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
--- Disable the arrow keys (really?)
--- vim.keymap.set({"n", "v", "i"}, "<up>", "<nop>", opts)
--- vim.keymap.set({"n", "v", "i"}, "<down>", "<nop>", opts)
--- vim.keymap.set({"n", "v", "i"}, "<left>", "<nop>", opts)
--- vim.keymap.set({"n", "v", "i"}, "<right>", "<nop>", opts)
+-- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
+-- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
+-- is not what someone will guess without a bit more experience.
+--
+-- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
+-- or just use <C-\><C-n> to exit terminal mode
+vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+
+-- Disable arrow keys in normal mode
+vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
+vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
+vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
+vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')

@@ -13,28 +13,3 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
-
--- -- Setup Plugins
--- require("lazy").setup({
--- 
--- 
--- 
---     -- Debugging
---     { "mfussenegger/nvim-dap" },
---     { "rcarriga/nvim-dap-ui" },
--- 
--- 
---     -- Auto close the things you want to auto close!
---     -- { "m4xshen/autoclose.nvim" },
--- 
---     -- neotest
---     { 
---         "nvim-neotest/neotest",
---         dependencies = {
---             "nvim-lua/plenary.nvim",
---             "antoinemadec/FixCursorHold.nvim",
---             "nvim-treesitter/nvim-treesitter",
---             "Issafalcon/neotest-dotnet"
---         }
---     },
--- })
