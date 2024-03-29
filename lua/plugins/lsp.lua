@@ -2,12 +2,14 @@ return {
     -- Manage language servers from within neovim
     {
         "williamboman/mason.nvim",
-        config = function() require("mason").setup() end,
+        config = function()
+            require("mason").setup()
+        end,
     },
     {
         "williamboman/mason-lspconfig.nvim",
         config = function()
-            require("mason-lspconfig").setup({
+            require("mason-lspconfig").setup {
                 ensure_installed = {
                     -- for configuring neovim
                     "lua_ls",
@@ -34,33 +36,33 @@ return {
                 --         require("lspconfig").lua_ls.setup(lua_opts)
                 --     end,
                 -- }
-            })
+            }
         end,
     },
     {
         "neovim/nvim-lspconfig",
         config = function()
-            local lspconfig = require("lspconfig")
+            local lspconfig = require "lspconfig"
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-            lspconfig.lua_ls.setup({ capabilities = capabilities })
+            lspconfig.lua_ls.setup { capabilities = capabilities }
 
-            lspconfig.omnisharp.setup({
+            lspconfig.omnisharp.setup {
                 cmd = { "omnisharp" },
                 organize_imports_on_format = true,
                 enable_import_completion = true,
                 capabilities = capabilities,
-            })
-            lspconfig.terraformls.setup({ capabilities = capabilities })
-            lspconfig.dockerls.setup({ capabilities = capabilities })
-            lspconfig.docker_compose_language_service.setup({ capabilities = capabilities })
-            lspconfig.bashls.setup({ capabilities = capabilities })
+            }
+            lspconfig.terraformls.setup { capabilities = capabilities }
+            lspconfig.dockerls.setup { capabilities = capabilities }
+            lspconfig.docker_compose_language_service.setup { capabilities = capabilities }
+            lspconfig.bashls.setup { capabilities = capabilities }
 
-            lspconfig.svelte.setup({ capabilities = capabilities })
-            lspconfig.tsserver.setup({ capabilities = capabilities })
-            lspconfig.cssls.setup({ capabilities = capabilities })
-            lspconfig.rust_analyzer.setup({ capabilities = capabilities })
-            lspconfig.sqlls.setup({ capabilities = capabilities })
+            lspconfig.svelte.setup { capabilities = capabilities }
+            lspconfig.tsserver.setup { capabilities = capabilities }
+            lspconfig.cssls.setup { capabilities = capabilities }
+            lspconfig.rust_analyzer.setup { capabilities = capabilities }
+            lspconfig.sqlls.setup { capabilities = capabilities }
 
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
             vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})

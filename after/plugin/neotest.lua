@@ -8,7 +8,7 @@
 --         })
 --     }
 -- })
--- 
+--
 -- local neotest = require("neotest")
--- 
+--
 -- vim.keymap.set("n", "<leader>tr", neotest.run.run)

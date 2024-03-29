@@ -1,1 +1,1 @@
-require('cain')
+require "cain"

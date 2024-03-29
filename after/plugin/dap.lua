@@ -1,11 +1,11 @@
 -- local dap = require("dap")
--- 
+--
 -- dap.adapters.coreclr = {
 --     type = "executable",
 --     command = vim.fn.stdpath("data") .. "/mason/bin/netcoredbg",
 --     args = { "--interpreter=vscode" },
 -- }
--- 
+--
 -- dap.configurations.cs = {
 --     {
 --         type = "coreclr",
