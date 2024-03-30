@@ -3,7 +3,7 @@ vim.keymap.set("i", "<C-c>", "<ESC>")
 vim.keymap.set("i", "jk", "<ESC>")
 
 -- This is decades old for me
-vim.keymap.set("n", "<C-s>", ":update<CR>", opts)
+vim.keymap.set("n", "<C-s>", ":update<CR>")
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
@@ -24,3 +24,5 @@ vim.keymap.set("n", "<left>", '<cmd>echo "Use h to move!!"<CR>')
 vim.keymap.set("n", "<right>", '<cmd>echo "Use l to move!!"<CR>')
 vim.keymap.set("n", "<up>", '<cmd>echo "Use k to move!!"<CR>')
 vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
+
+vim.keymap.set("n", "<leader>on", vim.cmd.Ex, { desc = "[O]pen [N]etrw" })
