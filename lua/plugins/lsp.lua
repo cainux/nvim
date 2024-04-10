@@ -49,9 +49,9 @@ return {
             lspconfig.lua_ls.setup { capabilities = capabilities }
             lspconfig.omnisharp.setup {
                 cmd = { "omnisharp" },
-                organize_imports_on_format = true,
-                enable_import_completion = true,
-                capabilities = capabilities,
+                -- organize_imports_on_format = true,
+                -- enable_import_completion = true,
+                -- capabilities = capabilities,
             }
             lspconfig.terraformls.setup { capabilities = capabilities }
             lspconfig.dockerls.setup { capabilities = capabilities }
