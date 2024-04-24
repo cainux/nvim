@@ -28,6 +28,7 @@ return {
                     "cssls",
                     "rust_analyzer",
                     "sqlls",
+                    "eslint",
                 },
                 -- handlers = {
                 --     lsp_zero.default_setup,
@@ -62,6 +63,7 @@ return {
             lspconfig.cssls.setup { capabilities = capabilities }
             lspconfig.rust_analyzer.setup { capabilities = capabilities }
             lspconfig.sqlls.setup { capabilities = capabilities }
+            lspconfig.eslint.setup { capabilities = capabilities }
 
             vim.api.nvim_create_autocmd("LspAttach", {
                 group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
