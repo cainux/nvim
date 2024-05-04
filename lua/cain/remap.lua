@@ -5,6 +5,9 @@ vim.keymap.set("i", "jk", "<ESC>")
 -- This is decades old for me
 vim.keymap.set("n", "<C-s>", ":update<CR>")
 
+-- This might make sense for me...
+vim.keymap.set("n", "<leader>fs", ":update<CR>", { desc = "[F]ile [S]ave" })
+
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })

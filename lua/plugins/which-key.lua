@@ -13,6 +13,8 @@ return { -- Useful plugin to show you pending keybinds.
             ["<leader>w"] = { name = "[W]orkspace", _ = "which_key_ignore" },
             ["<leader>a"] = { name = "[A]dd to Harpoon", _ = "which_key_ignore" },
             ["<leader>o"] = { name = "[O]pen", _ = "which_key_ignore" },
+            ["<leader>t"] = { name = "[T]est", _ = "which_key_ignore" },
+            ["<leader>f"] = { name = "[F]ile", _ = "which_key_ignore" },
         }
     end,
 }
