@@ -15,7 +15,8 @@ return {
                     "lua_ls",
 
                     -- my day job
-                    "omnisharp",
+                    -- "omnisharp",
+                    "csharp_ls",
                     "terraformls",
                     "tflint",
                     "dockerls",
@@ -48,11 +49,14 @@ return {
 
             -- Setup language servers. There's probably a nicer way of doing this
             lspconfig.lua_ls.setup { capabilities = capabilities }
-            lspconfig.omnisharp.setup {
-                cmd = { "omnisharp" },
-                -- organize_imports_on_format = true,
-                -- enable_import_completion = true,
-                -- capabilities = capabilities,
+            -- lspconfig.omnisharp.setup {
+            --     cmd = { "omnisharp" },
+            --     -- organize_imports_on_format = true,
+            --     -- enable_import_completion = true,
+            --     -- capabilities = capabilities,
+            -- }
+            lspconfig.csharp_ls.setup {
+                capabilities = capabilities
             }
             lspconfig.terraformls.setup { capabilities = capabilities }
             lspconfig.dockerls.setup { capabilities = capabilities }
