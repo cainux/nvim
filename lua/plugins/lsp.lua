@@ -22,6 +22,7 @@ return {
                     "dockerls",
                     "docker_compose_language_service",
                     "bashls",
+                    "jsonls",
 
                     -- bit of fun
                     "svelte", -- of course
@@ -62,6 +63,7 @@ return {
             lspconfig.dockerls.setup { capabilities = capabilities }
             lspconfig.docker_compose_language_service.setup { capabilities = capabilities }
             lspconfig.bashls.setup { capabilities = capabilities }
+            lspconfig.jsonls.setup { capabilities = capabilities }
             lspconfig.svelte.setup { capabilities = capabilities }
             lspconfig.tsserver.setup { capabilities = capabilities }
             lspconfig.cssls.setup { capabilities = capabilities }
