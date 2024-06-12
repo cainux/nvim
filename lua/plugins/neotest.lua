@@ -6,13 +6,31 @@ return {
         "antoinemadec/FixCursorHold.nvim",
         "nvim-treesitter/nvim-treesitter",
         "Issafalcon/neotest-dotnet",
+        "nvim-neotest/neotest-jest",
     },
     config = function()
         local neotest = require "neotest"
         neotest.setup {
-            adapters = { require "neotest-dotnet" {
-                -- dotnet_additional_args = { "--verbosity detailed" },
-            } },
+            adapters = {
+                require "neotest-dotnet" {
+                    -- dotnet_additional_args = { "--verbosity detailed" },
+                },
+                require "neotest-jest" {
+                    jestCommand = "npm test --",
+                    jestConfigFile = function(file)
+                        if string.find(file, "/packages/") then
+                            -- print(file)
+                            local foo = string.match(file, "(.-/[^/]+/)test") .. "jest.config.js"
+                            print(foo)
+                            return foo
+                        end
+
+                        return vim.fn.getcwd() .. "/jest.config.ts"
+                    end,
+                    -- env = { CI = true },
+                    cwd = function(path) return vim.fn.getcwd() end,
+                },
+            },
         }
 
         local map = function(keys, func, desc) vim.keymap.set("n", "<leader>" .. keys, func, { desc = "Test: " .. desc }) end

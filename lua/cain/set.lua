@@ -75,3 +75,6 @@ vim.opt.wrap = false
 
 -- Not sure what this one does
 vim.opt.termguicolors = true
+
+-- I prefer this off
+vim.opt.fixeol = false
