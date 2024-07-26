@@ -28,7 +28,7 @@ return {
                     "svelte", -- of course
                     "tsserver",
                     "cssls",
-                    "rust_analyzer",
+                    -- "rust_analyzer",
                     "sqlls",
                     "eslint",
                 },
