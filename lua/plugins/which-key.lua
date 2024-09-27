@@ -2,19 +2,29 @@ return { -- Useful plugin to show you pending keybinds.
     "folke/which-key.nvim",
     event = "VimEnter", -- Sets the loading event to 'VimEnter'
     config = function() -- This is the function that runs, AFTER loading
-        require("which-key").setup()
+        local wk = require "which-key"
+        wk.setup()
 
         -- Document existing key chains
-        require("which-key").register {
-            ["<leader>c"] = { name = "[C]ode", _ = "which_key_ignore" },
-            ["<leader>d"] = { name = "[D]ocument", _ = "which_key_ignore" },
-            ["<leader>r"] = { name = "[R]ename", _ = "which_key_ignore" },
-            ["<leader>s"] = { name = "[S]earch", _ = "which_key_ignore" },
-            ["<leader>w"] = { name = "[W]orkspace", _ = "which_key_ignore" },
-            ["<leader>a"] = { name = "[A]dd to Harpoon", _ = "which_key_ignore" },
-            ["<leader>o"] = { name = "[O]pen", _ = "which_key_ignore" },
-            ["<leader>t"] = { name = "[T]est", _ = "which_key_ignore" },
-            ["<leader>f"] = { name = "[F]ile", _ = "which_key_ignore" },
+        wk.add {
+            { "<leader>a", group = "[A]dd to Harpoon" },
+            { "<leader>a_", hidden = true },
+            { "<leader>c", group = "[C]ode" },
+            { "<leader>c_", hidden = true },
+            { "<leader>d", group = "[D]ocument" },
+            { "<leader>d_", hidden = true },
+            { "<leader>f", group = "[F]ile" },
+            { "<leader>f_", hidden = true },
+            { "<leader>o", group = "[O]pen" },
+            { "<leader>o_", hidden = true },
+            { "<leader>r", group = "[R]ename" },
+            { "<leader>r_", hidden = true },
+            { "<leader>s", group = "[S]earch" },
+            { "<leader>s_", hidden = true },
+            { "<leader>t", group = "[T]est" },
+            { "<leader>t_", hidden = true },
+            { "<leader>w", group = "[W]orkspace" },
+            { "<leader>w_", hidden = true },
         }
     end,
 }

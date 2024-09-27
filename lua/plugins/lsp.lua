@@ -2,9 +2,7 @@ return {
     -- Manage language servers from within neovim
     {
         "williamboman/mason.nvim",
-        config = function()
-            require("mason").setup()
-        end,
+        config = function() require("mason").setup() end,
     },
     {
         "williamboman/mason-lspconfig.nvim",
@@ -26,11 +24,13 @@ return {
 
                     -- bit of fun
                     "svelte", -- of course
-                    "tsserver",
+                    "ts_ls",
                     "cssls",
                     -- "rust_analyzer",
                     "sqlls",
                     "eslint",
+                    "powershell_es",
+                    "html",
                 },
                 -- handlers = {
                 --     lsp_zero.default_setup,
@@ -57,7 +57,7 @@ return {
             --     -- capabilities = capabilities,
             -- }
             lspconfig.csharp_ls.setup {
-                capabilities = capabilities
+                capabilities = capabilities,
             }
             lspconfig.terraformls.setup { capabilities = capabilities }
             lspconfig.dockerls.setup { capabilities = capabilities }
@@ -65,11 +65,13 @@ return {
             lspconfig.bashls.setup { capabilities = capabilities }
             lspconfig.jsonls.setup { capabilities = capabilities }
             lspconfig.svelte.setup { capabilities = capabilities }
-            lspconfig.tsserver.setup { capabilities = capabilities }
+            lspconfig.ts_ls.setup { capabilities = capabilities }
             lspconfig.cssls.setup { capabilities = capabilities }
             lspconfig.rust_analyzer.setup { capabilities = capabilities }
             lspconfig.sqlls.setup { capabilities = capabilities }
             lspconfig.eslint.setup { capabilities = capabilities }
+            lspconfig.powershell_es.setup { capabilities = capabilities }
+            lspconfig.html.setup { capabilities = capabilities }
 
             vim.api.nvim_create_autocmd("LspAttach", {
                 group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
@@ -80,9 +82,7 @@ return {
                     --
                     -- In this case, we create a function that lets us more easily define mappings specific
                     -- for LSP related items. It sets the mode, buffer and description for us each time.
-                    local map = function(keys, func, desc)
-                        vim.keymap.set("n", keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
-                    end
+                    local map = function(keys, func, desc) vim.keymap.set("n", keys, func, { buffer = event.buf, desc = "LSP: " .. desc }) end
 
                     -- Jump to the definition of the word under your cursor.
                     --  This is where a variable was first declared, or where a function is defined, etc.
