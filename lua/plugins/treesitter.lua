@@ -20,6 +20,7 @@ return {
                 "yaml",
                 "dockerfile",
                 "svelte",
+                "java",
             },
             auto_install = false,
             sync_install = false,

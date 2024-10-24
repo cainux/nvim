@@ -21,6 +21,7 @@ return {
                     "docker_compose_language_service",
                     "bashls",
                     "jsonls",
+                    "jdtls",
 
                     -- bit of fun
                     "svelte", -- of course
@@ -72,6 +73,7 @@ return {
             lspconfig.eslint.setup { capabilities = capabilities }
             lspconfig.powershell_es.setup { capabilities = capabilities }
             lspconfig.html.setup { capabilities = capabilities }
+            lspconfig.jdtls.setup { capabilities = capabilities }
 
             vim.api.nvim_create_autocmd("LspAttach", {
                 group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
