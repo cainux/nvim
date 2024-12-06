@@ -28,4 +28,8 @@ vim.keymap.set("n", "<right>", '<cmd>echo "Use l to move!!"<CR>')
 vim.keymap.set("n", "<up>", '<cmd>echo "Use k to move!!"<CR>')
 vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
 
+-- I'm starting to like Netrw
 vim.keymap.set("n", "<leader>on", vim.cmd.Ex, { desc = "[O]pen [N]etrw" })
+
+-- Trying these out for a bit
+vim.keymap.set("n", "<leader>gwp", "<cmd>!git commit -am 'wip' && git push<CR>", { desc = "[g]it commit -am [w]ip && git [p]ush" })
