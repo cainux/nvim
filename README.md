@@ -2,7 +2,7 @@
 
 - Clone to `~/.config/nvim`
 - Have the following installed:
-  - `nodejs` and `npm`
+  - `nodejs`, `npm` & `yarn`
   - `ripgrep`
   - `unzip`
   - A [Nerd Font](https://www.nerdfonts.com/) installed on your terminal
