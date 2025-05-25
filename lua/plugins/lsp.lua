@@ -13,7 +13,6 @@ return {
                     "lua_ls",
 
                     -- my day job
-                    -- "omnisharp",
                     "csharp_ls",
                     "terraformls",
                     "tflint",
@@ -21,13 +20,12 @@ return {
                     "docker_compose_language_service",
                     "bashls",
                     "jsonls",
-                    "jdtls",
 
                     -- bit of fun
-                    "svelte", -- of course
+                    "svelte",
                     "ts_ls",
                     "cssls",
-                    -- "rust_analyzer",
+                    "rust_analyzer",
                     "sqlls",
                     "eslint",
                     "powershell_es",
@@ -65,7 +63,6 @@ return {
             lspconfig.eslint.setup { capabilities = capabilities }
             lspconfig.powershell_es.setup { capabilities = capabilities }
             lspconfig.html.setup { capabilities = capabilities }
-            lspconfig.jdtls.setup { capabilities = capabilities }
 
             vim.api.nvim_create_autocmd("LspAttach", {
                 group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
