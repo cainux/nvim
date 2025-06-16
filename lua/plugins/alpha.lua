@@ -39,13 +39,13 @@ return {
 
             dashboard.section.buttons.val = {
                 -- dashboard.button("n", "  New file", "<Cmd>ene <CR>"),
-                dashboard.button("SPC s f", "  Find file"),
+                -- dashboard.button("SPC s f", "  Find file"),
                 -- dashboard.button("SPC q", "  Quit"),
             }
-            for _, a in ipairs(dashboard.section.buttons.val) do
-                a.opts.width = 49
-                a.opts.cursor = -2
-            end
+            -- for _, a in ipairs(dashboard.section.buttons.val) do
+            --     a.opts.width = 49
+            --     a.opts.cursor = -2
+            -- end
 
             alpha.setup(dashboard.config)
         end
