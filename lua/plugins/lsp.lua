@@ -51,6 +51,7 @@ return {
             lspconfig.lua_ls.setup { capabilities = capabilities }
             lspconfig.csharp_ls.setup { capabilities = capabilities }
             lspconfig.terraformls.setup { capabilities = capabilities }
+            lspconfig.tflint.setup { capabilities = capabilities }
             lspconfig.dockerls.setup { capabilities = capabilities }
             lspconfig.docker_compose_language_service.setup { capabilities = capabilities }
             lspconfig.bashls.setup { capabilities = capabilities }
