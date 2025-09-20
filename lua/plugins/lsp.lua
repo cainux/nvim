@@ -55,7 +55,6 @@ return {
             lspconfig.dockerls.setup { capabilities = capabilities }
             lspconfig.docker_compose_language_service.setup { capabilities = capabilities }
             lspconfig.bashls.setup { capabilities = capabilities }
-            lspconfig.jsonls.setup { capabilities = capabilities }
             lspconfig.svelte.setup { capabilities = capabilities }
             lspconfig.ts_ls.setup { capabilities = capabilities }
             lspconfig.cssls.setup { capabilities = capabilities }
@@ -64,6 +63,16 @@ return {
             lspconfig.eslint.setup { capabilities = capabilities }
             lspconfig.powershell_es.setup { capabilities = capabilities }
             lspconfig.html.setup { capabilities = capabilities }
+
+            lspconfig.jsonls.setup {
+                capabilities = capabilities,
+                settings = {
+                    json = {
+                        allowComments = true,
+                        allowTrailingCommas = true,
+                    }
+                }
+            }
 
             vim.api.nvim_create_autocmd("LspAttach", {
                 group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),

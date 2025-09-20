@@ -24,6 +24,8 @@ return {
                 "dockerfile",
                 "svelte",
                 "java",
+                "json",
+                "jsonc",
             },
             auto_install = false,
             sync_install = false,
