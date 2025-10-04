@@ -85,3 +85,7 @@ vim.opt.guicursor = {
   "i-ci-ve:ver25",  -- insert, command-line insert, visual-exclude: vertical bar (25% width)
   "r-cr-o:hor20",   -- replace, command-line replace, operator-pending: horizontal bar (20% height)
 }
+
+vim.api.nvim_create_autocmd("VimLeave", {
+  command = "set guicursor=a:ver20"
+})
