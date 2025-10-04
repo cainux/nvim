@@ -78,3 +78,10 @@ vim.opt.termguicolors = true
 
 -- I prefer this off
 vim.opt.fixeol = false
+
+-- Set cursor to bar in insert mode, block in other modes
+vim.opt.guicursor = {
+  "n-v-c-sm:block", -- normal, visual, command, select mode: block cursor
+  "i-ci-ve:ver25",  -- insert, command-line insert, visual-exclude: vertical bar (25% width)
+  "r-cr-o:hor20",   -- replace, command-line replace, operator-pending: horizontal bar (20% height)
+}
